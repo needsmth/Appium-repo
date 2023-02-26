@@ -29,15 +29,17 @@ public class BaseTest {
 		public void ConfigureAppium() throws MalformedURLException
 		{
 			service = new AppiumServiceBuilder().withAppiumJS(new File("C://Users//needs//AppData//Roaming//npm//node_modules//appium//build//lib//main.js"))
-					.withIPAddress("0.0.0.0").usingPort(4723).build();
+					.withIPAddress("127.0.0.1").usingPort(4723).build();
 			service.start();
 			
 			
 			
 			UiAutomator2Options options = new UiAutomator2Options();
 			options.setDeviceName("LeonidPhone");
-			options.setApp("C://Users//needs//eclipse-workspace//Appium//src//test//java//resources//ApiDemos-debug.apk");
-			
+			//Apps paths
+			//options.setApp("C://Users//needs//eclipse-workspace//Appium//src//test//java//resources//ApiDemos-debug.apk");
+			options.setApp("C://Users//needs//eclipse-workspace//Appium//src//test//java//resources//General-Store.apk");
+
 			
 			 driver = new AndroidDriver(new URL("http://127.0.0.1:4723"), options);
 			 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10)); 
