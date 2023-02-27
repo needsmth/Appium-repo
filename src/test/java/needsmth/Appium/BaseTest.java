@@ -35,7 +35,10 @@ public class BaseTest {
 			
 			
 			UiAutomator2Options options = new UiAutomator2Options();
-			options.setDeviceName("LeonidPhone");
+			//android studio emulator
+			//options.setDeviceName("LeonidPhone");
+			//google pixel device
+			options.setDeviceName("059AY1X439");
 			//Apps paths
 			//options.setApp("C://Users//needs//eclipse-workspace//Appium//src//test//java//resources//ApiDemos-debug.apk");
 			options.setApp("C://Users//needs//eclipse-workspace//Appium//src//test//java//resources//General-Store.apk");
